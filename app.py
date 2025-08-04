@@ -1,18 +1,28 @@
-
 import streamlit as st
 import numpy as np
 import tensorflow as tf
 from tensorflow.keras.models import load_model
 from PIL import Image
-import cv2
+import os
+import gdown
+
+
+#  Download model from Google Drive if missing
+
+MODEL_PATH = "braintumer.h5"
+GOOGLE_DRIVE_FILE_ID = "YOUR_FILE_ID"  # Replace with your actual Google Drive file ID
+URL = f"https://drive.google.com/uc?id={GOOGLE_DRIVE_FILE_ID}"
+
+if not os.path.exists(MODEL_PATH):
+    st.write("Downloading model file...")
+    gdown.download(URL, MODEL_PATH, quiet=False)
+    st.success("Model downloaded successfully!")
 
 
 #  Load Model and Class Names
 
-MODEL_PATH = "braintumer.h5"
 model = load_model(MODEL_PATH)
-
-class_labels = ['glioma', 'meningioma', 'no_tumor', 'pituitary']  # Update as per your dataset
+class_labels = ['glioma', 'meningioma', 'no_tumor', 'pituitary']  # Update if needed
 
 
 #  App Title
@@ -34,8 +44,8 @@ if uploaded_file is not None:
     # Preprocess image
     img = image.resize((224, 224))
     img_array = np.array(img)
-    if img_array.shape[-1] == 4:
-        img_array = img_array[..., :3]  
+    if img_array.shape[-1] == 4:  
+        img_array = img_array[..., :3]
     img_array = img_array / 255.0
     img_array = np.expand_dims(img_array, axis=0)
 
