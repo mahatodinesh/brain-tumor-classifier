@@ -6,24 +6,24 @@ from tensorflow.keras.models import load_model
 from PIL import Image
 import cv2
 
-# ----------------------------------------------
-# 🧠 Load Model and Class Names
-# ----------------------------------------------
+
+#  Load Model and Class Names
+
 MODEL_PATH = "braintumer.h5"
 model = load_model(MODEL_PATH)
 
 class_labels = ['glioma', 'meningioma', 'no_tumor', 'pituitary']  # Update as per your dataset
 
-# ----------------------------------------------
-# 📊 App Title
-# ----------------------------------------------
+
+#  App Title
+
 st.set_page_config(page_title="Brain Tumor Classifier", layout="centered")
 st.title("🧠 Brain Tumor Classification")
 st.markdown("Upload an MRI brain image to detect the type of tumor.")
 
-# ----------------------------------------------
-# 📤 Upload Image
-# ----------------------------------------------
+
+#  Upload Image
+
 uploaded_file = st.file_uploader("Choose an MRI image...", type=["jpg", "jpeg", "png"])
 
 if uploaded_file is not None:
@@ -35,7 +35,7 @@ if uploaded_file is not None:
     img = image.resize((224, 224))
     img_array = np.array(img)
     if img_array.shape[-1] == 4:
-        img_array = img_array[..., :3]  # remove alpha channel
+        img_array = img_array[..., :3]  
     img_array = img_array / 255.0
     img_array = np.expand_dims(img_array, axis=0)
 
