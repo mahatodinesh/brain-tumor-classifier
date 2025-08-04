@@ -10,7 +10,7 @@ import gdown
 #  Download model from Google Drive if missing
 
 MODEL_PATH = "braintumer.h5"
-GOOGLE_DRIVE_FILE_ID = "YOUR_FILE_ID"  # Replace with your actual Google Drive file ID
+GOOGLE_DRIVE_FILE_ID = "1ARKjYXd_1m3T2OYrKF3XJzcnc-9WvpBQ"  
 URL = f"https://drive.google.com/uc?id={GOOGLE_DRIVE_FILE_ID}"
 
 if not os.path.exists(MODEL_PATH):
@@ -28,7 +28,7 @@ class_labels = ['glioma', 'meningioma', 'no_tumor', 'pituitary']  # Update if ne
 #  App Title
 
 st.set_page_config(page_title="Brain Tumor Classifier", layout="centered")
-st.title("🧠 Brain Tumor Classification")
+st.title(" Brain Tumor Classification")
 st.markdown("Upload an MRI brain image to detect the type of tumor.")
 
 
