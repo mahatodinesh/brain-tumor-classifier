@@ -1,0 +1,41 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Large model files
+*.h5
+*.hdf5
+*.keras
+
+# Dataset
+dataset/
+data/
+*.zip
+*.tar
+*.gz
+
+# Streamlit cache
+.streamlit/
+
+# VS Code settings
+.vscode/
