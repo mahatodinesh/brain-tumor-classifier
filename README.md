@@ -1,4 +1,4 @@
-# 🧠 Brain Tumor Classification (MRI)
+#  Brain Tumor Classification (MRI)
 
 This project focuses on classifying brain tumors into four categories using deep learning on MRI images.  
 It includes:
@@ -20,13 +20,13 @@ It includes:
 
 ---
 
-## 🧠 Model Architectures
+##  Model Architectures
 
-### 🔸 Custom CNN
+###  Custom CNN
 - 3 Convolutional layers with MaxPooling
 - Trained from scratch on the dataset
 
-### 🔸 MobileNetV2 (Transfer Learning)
+###  MobileNetV2 (Transfer Learning)
 - Pre-trained on ImageNet
 - Fine-tuned on brain tumor MRI dataset
 - Grad-CAM supported for model explainability
