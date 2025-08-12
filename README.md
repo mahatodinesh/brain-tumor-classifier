@@ -8,7 +8,7 @@ It includes:
 
 ---
 
-## 📂 Dataset
+##  Dataset
 
 **Source:** [Kaggle Brain Tumor Classification (MRI)](https://www.kaggle.com/datasets)
 
@@ -33,7 +33,7 @@ It includes:
 
 ---
 
-## 📊 Sample Metrics (Custom CNN Example)
+##  Sample Metrics (Custom CNN Example)
 
 | Class       | Precision | Recall | F1-Score |
 |-------------|-----------|--------|----------|
@@ -44,7 +44,7 @@ It includes:
 
 ---
 
-## 🚀 How to Run the Project
+##  How to Run the Project
 
 ### 1. Clone the Repository
 ```bash
@@ -64,7 +64,7 @@ streamlit run app.py
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 ```
 brain-tumor-classifier/
 │
